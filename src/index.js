@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import './global.css';
-import Badge from './pages/BadgeNew.js';
+import App from './components/App.jsx';
 
 const container = document.getElementById('app');
-ReactDOM.render(<Badge />, container);
+
+ReactDOM.render(<App />, container);
