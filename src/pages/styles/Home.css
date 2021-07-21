@@ -1,0 +1,68 @@
+.Home {
+	width: 100%;
+	height: 100vh;
+	background: url('../../images/stars.svg') #1b1b25;
+	background-repeat: repeat;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+}
+
+.container {
+	width: 1100 px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+}
+
+.container .info {
+	margin-top: 15px;
+}
+
+@media (max-width: 1199px) {
+	.container .right-container img {
+		width: 500px;
+	}
+}
+
+@media (max-width: 991px) {
+	.container .left-container img {
+		width: 200px;
+	}
+	.container .right-container img {
+		width: 360px;
+	}
+}
+
+@media (max-width: 650px) {
+	.container .left-container img {
+		width: 150px;
+	}
+	.container .right-container img {
+		width: 250px;
+	}
+}
+
+@media (max-width: 650px) {
+	.container {
+		flex-direction: column-reverse;
+	}
+
+	.container .left-container {
+		text-align: center;
+	}
+
+	.container .left-container img {
+		width: 100px;
+		margin: 0 auto;
+	}
+
+	.container .left-container .info .full {
+		width: 100%;
+	}
+
+	.container .right-container img {
+		width: 200px;
+	}
+}
