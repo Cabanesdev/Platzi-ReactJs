@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './styles/Home.css';
 import platziconfLogoImage from '../images/platziconf-logo.svg';
 import astronautsImage from '../images/astronauts.svg';
+
 class Home extends React.Component {
 	render() {
 		return (
