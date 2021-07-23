@@ -19,7 +19,12 @@ function App() {
 						<Badges />
 					</Layout>
 				</Route>
-				<Route path='/badges/new'>
+				<Route exact path='/badges/new'>
+					<Layout>
+						<BadgeNew />
+					</Layout>
+				</Route>
+				<Route exact path='/badges/:badgeId/edit'>
 					<Layout>
 						<BadgeNew />
 					</Layout>
