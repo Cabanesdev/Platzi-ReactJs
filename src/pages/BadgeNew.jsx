@@ -3,6 +3,7 @@ import header from '../images/platziconf-logo.svg';
 import Badge from '../components/Badge.jsx';
 import BadgeForm from '../components/BadgeForm.jsx';
 import './styles/BadgeNew.css';
+import api from '../api.js';
 
 class BadgeNew extends React.Component {
 	state = {
@@ -28,6 +29,17 @@ class BadgeNew extends React.Component {
 		});
 	};
 
+	handleSubmit = async (e) => {
+		e.preventDefault();
+		this.setState({ loading: true, error: null });
+
+		try {
+			await api.badges.create(this.state.form);
+			this.setState({ loading: false });
+		} catch (error) {
+			this.setState({ loading: false, error: error });
+		}
+	};
 	render() {
 		return (
 			<React.Fragment>
@@ -49,10 +61,11 @@ class BadgeNew extends React.Component {
 								jobTitle={this.state.form.jobTitle || 'Job_Tittle'}
 							/>
 						</div>
-						<div className='col'>
+						<div className='col-6'>
 							<BadgeForm
 								onChange={this.handleChange}
 								formValues={this.state.form}
+								onSubmit={this.handleSubmit}
 							/>
 						</div>
 					</div>

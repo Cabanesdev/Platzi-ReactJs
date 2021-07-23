@@ -8,9 +8,9 @@ class BadgesListItem extends React.Component {
 	render() {
 		return (
 			<div className='BadgesListItem'>
-				<Gravatar
+				<img
 					className='BadgesListItem__avatar'
-					email={this.props.badge.email}
+					src={this.props.badge.avatarUrl}
 					alt={`${this.props.badge.firstName} ${this.props.badge.lastName}`}
 				/>
 
